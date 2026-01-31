@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  /* 1️⃣ Brand Colors */
+  --brand-primary: #115DFC;
+  --brand-secondary: #2563EB;
+  --brand-soft: #EAF1FF;
+  --brand-hover: #1E4ED8;
+  --brand-active: #0B3CC1;
+
+  /* 2️⃣ Neutral & Surface */
+  --bg-page: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-muted: #F1F5F9;
+  --border-default: #E5E7EB;
+  --divider: #E2E8F0;
+
+  /* 3️⃣ Typography */
+  --text-primary: #2B2B2F;
+  --text-secondary: #5F5D6B;
+  --text-placeholder: #8D8CA1;
+  --text-inverse: #FFFFFF;
+  --icon-stroke: #141B34;
+
+  /* 4️⃣ Role-Based Themes */
+  --role-patient-bg: #EFF6FF;
+  --role-patient-text: #1D4ED8;
+  --role-patient-accent: #3B82F6;
+
+  --role-doctor-bg: #ECFDF5;
+  --role-doctor-text: #047857;
+  --role-doctor-accent: #16A34A;
+
+  --role-lab-bg: #F5F3FF;
+  --role-lab-text: #6D28D9;
+  --role-lab-accent: #7C3AED;
+
+  /* 5️⃣ Status & Feedback */
+  --status-success: #16A34A;
+  --status-warning: #FACC15;
+  --status-danger: #DC2626;
+  --status-info: #2563EB;
+
+  /* 6️⃣ Charts & Analytics */
+  --chart-primary: #3B82F6;
+  --chart-grid: #E2E8F0;
+  --chart-bg: #CBD5E1;
+
+  /* legacy mappings for shadcn/ui if used */
+  --background: var(--bg-page);
+  --foreground: var(--text-primary);
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Ensure inputs are always readable */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  color: #1a1a1b;
+  /* text-gray-900 equivalent */
+}
+
+/* Override autofill to maintain text color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #1a1a1b !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+*.log
+
+# Large Files & Model Data
+model/*.pth
+model/*.h5
+instance/*.db
+static/uploads/*
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+.DS_Store
+
+# Misc
+.env
+.ipynb_checkpoints/

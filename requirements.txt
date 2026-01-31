@@ -1,0 +1,14 @@
+Flask
+Flask-Login
+Flask-SQLAlchemy
+Werkzeug
+torch
+torchvision
+Pillow
+numpy
+matplotlib
+pandas
+scipy
+requests
+pyngrok
+
